@@ -6,49 +6,48 @@
         <meta name="viewport" content="width=device-with, initial-scale=1">
         <link rel="stylesheet" href="../styles/vendor/bootstrap.min.css">
         <script src="../scripts/vendor/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/app/BudgetOperations.js"></script>
     </head>
     <body>
-        <div class="container-fluid" style="background-color:rgb(102, 102, 230);">
-            <div class="row">
-                <div class="col-sm-12">
-                        <h4 style="color:aliceblue;">Available Budget</h4>
-                                
+        <div class="container-fluid" style="background-color:rgb(100, 162, 233);">
+            <div class="row justify-content-md-center">
+                <div class="col-md-4"> 
+                    <h4 style="color:aliceblue;">Available Budget</h4>          
                 </div>
             </div>
-            <div class="row">
-                    <div class="col-sm-12">
-                            
-                            <h1 style="color:aliceblue;" id="availablebudgeth1"></h1>
-                                     
-                    </div>
+            <div class="row justify-content-md-center">  
+                <div class="col-md-4">                           
+                    <h1 style="color:aliceblue;" id="availablebudgeth1"></h1>                                     
                 </div>
-                <div class="row">
-                        <div class="col-sm-12">
-                               
-                                <span class="label label-default">Income</span>
-                                       
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-sm-12">
-                                    
-                                    <span class="label label-default">Expenses</span>          
-                            </div>
-                        </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-4" style="background-color:aqua">
+                    <h1>hola</h1>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-4" style="background-color:rgb(255, 0, 119)">
+                    <h1>hola</h1>
+                </div>
+            </div>
             </div>
             <div class="container-fluid">
             <div class="row" style="background-color:rgb(235, 240, 233);">
                     <div class="col-sm-2">
-                        <input type="text" class="form-control">                            
+                        <select class="form-control" id="operationTypeSelect">
+                            <option>+</option>
+                            <option>-</option>
+                        </select>                                                           
                     </div>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control">     
+                        <input type="text" class="form-control" id="operationTextInput">     
                     </div>                      
                     <div class="col-sm-2">
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" id="operationValueInput">
                     </div>
                     <div class="col-sm-2">
-                        <label for="username">fill everything</label>
+                        <button type="button" class="btn btn-success" onclick="app.addNewItem()" id="button">Success</button>
                     </div>
             </div>
             <div class="row">
@@ -69,7 +68,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                           
                         </tbody>
                     </table>
                 </div>
@@ -82,7 +80,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
                         </tbody>
                     </table>
                 </div>
