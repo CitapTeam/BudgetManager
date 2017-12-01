@@ -67,6 +67,104 @@ The innerHTML Property
 
 ### Get Children/Parent Nodes
 
+How to get the child nodes of one element?
+
+```
+var parent = document.getElementById(id);
+var childNodes = parent.childNodes;
+```
+
+How to get the parent nodes of one element?
+
+```
+var parent = document.getElementById(id);
+var childNodes = parent.childNodes;
+var parentNode = childNodes.parentNode;
+```
+### Create New DOM Elements
+
+Create elements
+```
+var newElement = document.createElement('h1');
+```
+
+Create nodes for the new elements
+```
+var newElementText = document.createTextNode("CITAP Team is the best");
+```
+Append the node to the new element
+```
+newElement.appendChild(newElementText);
+```
+
+#### Add Elements to the DOM
+
+```javascript
+// grab element on page you want to add stuff to
+var firstHeading = document.getElementById('firstHeading');
+
+// add both new elements to the page as children to the element we stored in firstHeading.
+firstHeading.appendChild(newHeading);
+firstHeading.appendChild(newParagraph);
+
+// can also insert before like so
+
+// get parent node of firstHeading
+var parent = firstHeading.parentNode;
+
+// insert newHeading before FirstHeading
+parent.insertBefore(newHeading, firstHeading);
+```
+
+#### Add Elements to the DOM cont.
+
+Suppose you have the following HTML:
+```html
+<div id="box1">
+  <p>Some example text</p>
+</div>
+<div id="box2">
+  <p>Some example text</p>
+</div>
+```
+
+```javascript
+// you can insert another snippet of HTML between #box1 and #box2 
+var box2 = document.getElementById("box2");
+box2.insertAdjacentHTML('beforebegin', '<div><p>This gets inserted.</p></div>');
+
+// beforebegin - The HTML would be placed immediately before the element, as a sibling.
+// afterbegin - The HTML would be placed inside the element, before its first child.
+// beforeend - The HTML would be placed inside the element, after its last child.
+// afterend - The HTML would be placed immediately after the element, as a sibling.
+```
+
+#### Add/Remove/Toggle/Check Classes
+
+```javascript
+// grab element on page you want to use
+var firstHeading = document.getElementById('firstHeading');
+
+// will remove foo if it is a class of firstHeading
+firstHeading.classList.remove("foo");
+
+// will add the class "anotherClass" if one does not already exist
+firstHeading.classList.add("anotherclass");
+
+// add or remove multiple classes
+firstHeading.classList.add("foo","bar"); 
+firstHeading.classList.remove("foo","bar");
+
+// if visible class is set remove it, otherwise add it
+firstHeading.classList.toggle("visible");
+
+// will return true if it has class of "foo" or false if it does not
+firstHeading.classList.contains("foo");
+
+
+## List of all the Element Operations
+
+> https://developer.mozilla.org/en-US/docs/Web/API/Element
 
 
 ### References:
