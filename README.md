@@ -41,7 +41,20 @@ How to get a list of the elements in the DOM in the specified group of selector?
 document.querySelectorAll(selectors);
 ```
 
-This ways can be combined, for example:
+Other HTML accessible Objects
+-document.anchors : retrun a list of all the anchors in the document (Deprecated in HTML5)
+-document.body : returns the body node in the DOM
+-document.documentElement : returns the element in the root element of the DOM
+-document.embeds
+-document.forms
+-document.head
+-document.images
+-document.links
+-document.scripts
+-document.title
+
+
+These ways to access the DOM can be combined, for example:
 
 ```
 var parent = document.getElementById(id);
