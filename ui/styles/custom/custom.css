@@ -1,0 +1,17 @@
+.total-container{
+    margin: 6px;
+    border-radius: 2px; 
+}
+
+.header-container{
+    padding: 45px 0 45px 0; 
+}
+
+.add-item-content{
+    padding: 20px 0;    
+}
+
+.details-title{
+    padding: 30px 0 10px 0;
+}
+
