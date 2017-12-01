@@ -175,7 +175,6 @@ Element.classList.contains(id);
 
 ### Benefits of use modules
 * Maintainability
-* Namespacing
+* Detaching from the Global Scope and Namespacing
 * Reusability
 * Decoupling
-* Detaching from the Global Scope
