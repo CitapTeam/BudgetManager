@@ -162,7 +162,9 @@ firstHeading.classList.toggle("visible");
 firstHeading.classList.contains("foo");
 
 
+## List of all the Element Operations
 
+> https://developer.mozilla.org/en-US/docs/Web/API/Element
 
 
 ### References:
