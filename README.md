@@ -113,21 +113,23 @@ newElement.appendChild(newElementText);
 
 ### Other Approach to Add Elements to the Dom
 
-Suppose you have the following HTML:
-```html
-<div id="box1">
-  <p>Some example text</p>
-</div>
-<div id="box2">
-  <p>Some example text</p>
-</div>
+Attach html snippets to an element
+```
+var element = document.getElementById(id);
+element.insertAdjacentHTML(position, text);
 ```
 
-```javascript
-// you can insert another snippet of HTML between #box1 and #box2 
-var box2 = document.getElementById("box2");
-box2.insertAdjacentHTML('beforebegin', '<div><p>This gets inserted.</p></div>');
+Positions example
 
+```
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 ### Add/Remove/Toggle/Check Classes
 
