@@ -97,6 +97,11 @@ Append the node to the new element
 newElement.appendChild(newElementText);
 ```
 
+parent.insertBefore(newHeading, firstHeading);
+
+#### Full List of Node operations
+> https://developer.mozilla.org/en-US/docs/Web/API/Node
+
 #### Add Elements to the DOM
 
 ```javascript
