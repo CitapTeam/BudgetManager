@@ -168,3 +168,14 @@ Element.classList.contains(id);
 > https://developer.mozilla.org
 > https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86#accessing-dom-elements
 > https://www.w3schools.com/js/js_htmldom_elements.asp
+
+## Modules
+
+### What is a module?
+
+### Benefits of use modules
+* Maintainability
+* Namespacing
+* Reusability
+* Decoupling
+* Detaching from the Global Scope
