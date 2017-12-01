@@ -81,7 +81,7 @@ var parent = document.getElementById(id);
 var childNodes = parent.childNodes;
 var parentNode = childNodes.parentNode;
 ```
-#### Create New DOM Elements
+### Create New DOM Elements
 
 Create elements
 ```
