@@ -83,20 +83,18 @@ var parentNode = childNodes.parentNode;
 ```
 #### Create New DOM Elements
 
-```javascript
-// create new elments
-var newHeading = document.createElement('h1');
-var newParagraph = document.createElement('p');
+Create elements
+```
+var newElement = document.createElement('h1');
+```
 
-// create text nodes for new elements
-var h1Text= document.createTextNode("This is the fucking header text!");
-var paraText= document.createTextNode("This is the fucking Paragraph text!");
-
-// attach new text nodes to new elements
-newHeading.appendChild(h1Text);
-newParagraph.appendChild(paraText);
-
-// elements are now created and ready to be added to the DOM.
+Create nodes for the new elements
+```
+var newElementText = document.createTextNode("CITAP Team is the best");
+```
+Append the node to the new element
+```
+newElement.appendChild(newElementText);
 ```
 
 #### Add Elements to the DOM
