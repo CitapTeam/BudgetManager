@@ -42,16 +42,16 @@ document.querySelectorAll(selectors);
 ```
 
 Other HTML accessible Objects
--document.anchors : retrun a list of all the anchors in the document (Deprecated in HTML5)
--document.body : returns the body node in the DOM
--document.documentElement : returns the element in the root element of the DOM
--document.embeds
--document.forms
--document.head
--document.images
--document.links
--document.scripts
--document.title
+* document.anchors : retrun a list of all the anchors in the document (Deprecated in HTML5)
+* document.body : returns the body node in the DOM
+* document.documentElement : returns the element in the root element of the DOM
+* document.embeds
+* document.forms
+* document.head
+* document.images
+* document.links
+* document.scripts
+* document.title
 
 
 These ways to access the DOM can be combined, for example:
@@ -70,6 +70,6 @@ The innerHTML Property
 
 
 ### References:
-https://developer.mozilla.org
-https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86#accessing-dom-elements
-https://www.w3schools.com/js/js_htmldom_elements.asp
+* https://developer.mozilla.org
+* https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86#accessing-dom-elements
+* https://www.w3schools.com/js/js_htmldom_elements.asp
