@@ -18,24 +18,39 @@ document.getElementById(id);
 ```
 
 How to get all the child elements that have a class associated?
-```
-document.getElementsByClassName(names);
 
 ```
+document.getElementsByClassName(names);
+```
+
 How to get all HTML elements with a specific tag name?
+
 ```
 document.getElementsByTagName(name);
 ```
 
+How to get the first element in the DOM in the specified group of selector?
 
 ```
 document.querySelector(selectors);
 ```
 
+How to get a list of the elements in the DOM in the specified group of selector?
+
 ```
 document.querySelectorAll(selectors);
 ```
 
+This ways can be combined, for example:
+
+```
+var parent = document.getElementById(id);
+var childs = parent.getElementsByTagName("p");
+```
+
+This is going to retrieve a list of elements "p" for the parent element.
+
+The innerHTML Property
 
 ### Get Children/Parent Nodes
 
