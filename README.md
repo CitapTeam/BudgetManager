@@ -81,6 +81,14 @@ var parent = document.getElementById(id);
 var childNodes = parent.childNodes;
 var parentNode = childNodes.parentNode;
 ```
+
+Validate that the node has child nodes
+
+```
+var parent = document.getElementById(Id);
+var hasChildNodes = parent.hasChildNodes();
+```
+
 ### Create New DOM Elements
 
 Create elements
@@ -97,82 +105,76 @@ Append the node to the new element
 newElement.appendChild(newElementText);
 ```
 
-parent.insertBefore(newHeading, firstHeading);
-
 #### Full List of Node operations
 > https://developer.mozilla.org/en-US/docs/Web/API/Node
 
-#### Add Elements to the DOM
-
-```javascript
-// grab element on page you want to add stuff to
-var firstHeading = document.getElementById('firstHeading');
-
-// add both new elements to the page as children to the element we stored in firstHeading.
-firstHeading.appendChild(newHeading);
-firstHeading.appendChild(newParagraph);
-
-// can also insert before like so
-
-// get parent node of firstHeading
-var parent = firstHeading.parentNode;
-
-// insert newHeading before FirstHeading
-parent.insertBefore(newHeading, firstHeading);
-```
-
-#### Add Elements to the DOM cont.
-
-Suppose you have the following HTML:
-```html
-<div id="box1">
-  <p>Some example text</p>
-</div>
-<div id="box2">
-  <p>Some example text</p>
-</div>
-```
-
-```javascript
-// you can insert another snippet of HTML between #box1 and #box2 
-var box2 = document.getElementById("box2");
-box2.insertAdjacentHTML('beforebegin', '<div><p>This gets inserted.</p></div>');
-
-// beforebegin - The HTML would be placed immediately before the element, as a sibling.
-// afterbegin - The HTML would be placed inside the element, before its first child.
-// beforeend - The HTML would be placed inside the element, after its last child.
-// afterend - The HTML would be placed immediately after the element, as a sibling.
-```
-
-#### Add/Remove/Toggle/Check Classes
-
-```javascript
-// grab element on page you want to use
-var firstHeading = document.getElementById('firstHeading');
-
-// will remove foo if it is a class of firstHeading
-firstHeading.classList.remove("foo");
-
-// will add the class "anotherClass" if one does not already exist
-firstHeading.classList.add("anotherclass");
-
-// add or remove multiple classes
-firstHeading.classList.add("foo","bar"); 
-firstHeading.classList.remove("foo","bar");
-
-// if visible class is set remove it, otherwise add it
-firstHeading.classList.toggle("visible");
-
-// will return true if it has class of "foo" or false if it does not
-firstHeading.classList.contains("foo");
-
-
-## List of all the Element Operations
-
+#### Full List of Element operations
 > https://developer.mozilla.org/en-US/docs/Web/API/Element
 
+### Other Approach to Add Elements to the Dom
+
+Attach html snippets to an element
+```
+var element = document.getElementById(id);
+element.insertAdjacentHTML(position, text);
+```
+
+Positions example
+
+```
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
+
+### Add/Remove/Toggle/Check Classes
+
+Get Element 
+```
+var Element = document.getElementById(id);
+```
+
+Remove a class from an element
+```
+Element.classList.remove(id);
+```
+
+Add a class to an element
+```
+Element.classList.add(id);
+```
+
+Add and remove multiple classes
+```
+Element.classList.add(id1,id2); 
+Element.classList.remove(id1,id2);
+```
+
+Remove if the class is setted add it if not
+```
+Element.classList.toggle("visible");
+```
+
+Verify if an element has one associated class
+```
+Element.classList.contains(id);
+```
 
 ### References:
-* https://developer.mozilla.org
-* https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86#accessing-dom-elements
-* https://www.w3schools.com/js/js_htmldom_elements.asp
+> https://developer.mozilla.org
+> https://gist.github.com/thegitfather/9c9f1a927cd57df14a59c268f118ce86#accessing-dom-elements
+> https://www.w3schools.com/js/js_htmldom_elements.asp
+
+## Modules
+
+### What is a module?
+
+### Benefits of use modules
+* Maintainability
+* Detaching from the Global Scope and Namespacing
+* Reusability
+* Decoupling
