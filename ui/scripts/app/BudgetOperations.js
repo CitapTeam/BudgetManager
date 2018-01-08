@@ -32,7 +32,6 @@ var app = (function () {
 
     var setTotalValues = function(){
         var totalIncome = calculateTotals("income");
-        console.log(totalIncome);
         document.getElementsByClassName("total-income")[0].innerHTML = totalIncome;
     
         var totalExpenses = calculateTotals("expenses");
@@ -41,7 +40,7 @@ var app = (function () {
 
     var calculateTotals = function(typeValue){
         var total = 0;
-        
+        //#incomeTable td.income-value
         var values = document.querySelectorAll("#"+typeValue+"Table td."+typeValue+"-value") || [];
         values.forEach(function(element) {
             total += Number(element.innerText);
